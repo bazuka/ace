@@ -328,13 +328,7 @@
 
 /* todo use background instead?*/
 .ace_line .ace_indent-guide {
-    border-right: dotted 1px lightgray;
-    display: inline-block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.ace_dark .ace_line .ace_indent-guide {
-    border-right-color: lightgray;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") repeat-y;
+    background-position-x: right;
 }
 

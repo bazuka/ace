@@ -129,7 +129,8 @@ var modesByName = {
     textile:    ["Textile"      , "textile"],
     xml:        ["XML"          , "xml|rdf|rss|wsdl|xslt|atom|mathml|mml|xul|xbl"],
     xquery:     ["XQuery"       , "xq"],
-    yaml:       ["YAML"         , "yaml"]
+    yaml:       ["YAML"         , "yaml"],
+    js_next:    ["jsNext"       , null]
 };
 
 for (var name in modesByName) {
@@ -284,7 +285,7 @@ env.editor.commands.addCommands([{
     name: "gotoline",
     bindKey: {win: "Ctrl-L", mac: "Command-L"},
     exec: function(editor, line) {
-        if (typeof needle == "object") {
+        if (typeof line == "object") {
             var arg = this.name + " " + editor.getCursorPosition().row;
             editor.cmdLine.setValue(arg, 1)
             editor.cmdLine.focus()
@@ -326,7 +327,7 @@ cmdLine.commands.bindKeys({
     },
 })
 
-cmdLine.commands.removeCommands(["find", "goToLine", "findAll", "replace", "replaceAll"])
+cmdLine.commands.removeCommands(["find", "gotoline", "findall", "replace", "replaceall"])
 
 /**
  * This demonstrates how you can define commands and bind shortcuts to them.
